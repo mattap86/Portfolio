@@ -66,7 +66,7 @@ sub {
     padding-top:5.6%;
 }
 
-.homePage, .aboutMe, .portfolio {
+.homePage, .aboutMe{
     background-color: #999999;
     position: relative;
     width: 100%;
@@ -74,16 +74,21 @@ sub {
 
 }
 
-.aboutMe {
-   z-index: 1;
-}
+/*.aboutMe {*/
+   /*z-index: 1;*/
+/*}*/
 
-.homeText, .aboutText, .portfolioText {
+.homeText, .aboutText {
     text-align: center;
     position: absolute;
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.portfolioText {
+    background-color: #999999;
+    padding: 25px;
 }
 
 .aboutMeBoxes {
@@ -105,33 +110,33 @@ button {
 }
 
 
-.projectBlock {
+.projectBlocks {
     display: inline-block;
     width: 100%;
-    height: 600px;
-    background: #777777;
-    border: 2px solid #987654;
+    height: 500;
+    background: #999999;
+    padding: 30px;
 }
 
-.spacer {
-    height: 500px;
-}
+/*.spacer {*/
+    /*height: 500px;*/
+/*}*/
 
-.project {
+.projectBox {
     display: inline-block;
     width: 30%;
-    height: 300px;
-    background: #777777;
-    border-bottom: 5px solid #999999;
-}
-
-.projectSummary {
-    display: inline-block;
-    width: 30%;
-    height: 300px;
+    height: 250px;
     background: #444444;
     border-bottom: 5px solid #999999;
 }
+
+/*.projectSummary {*/
+    /*display: inline-block;*/
+    /*width: 30%;*/
+    /*height: 300px;*/
+    /*background: #444444;*/
+    /*border-bottom: 5px solid #999999;*/
+/*}*/
 
 @media screen and (max-width: 768px) {
     nav {
@@ -154,10 +159,10 @@ button {
         display: block;
     }
 
-    input {
-        display: block;
-        margin: 0 auto;
-    }
+    /*input {*/
+        /*display: block;*/
+        /*margin: 0 auto;*/
+    /*}*/
 
     .aboutMe {
         height: 800px;
