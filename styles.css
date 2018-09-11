@@ -1,0 +1,88 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav {
+    padding: 20px;
+    background-color: #444444;
+    display: inline-block;
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    visibility: hidden;
+}
+
+.navLinks a {
+    padding: 20px;
+    margin-right: 50px;
+    text-decoration: none;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+}
+
+.hamburgerMenu div {
+    width: 35px;
+    height: 5px;
+    background-color: #00ffff;
+    border-radius: 12px;
+    margin: 6px auto;
+    display: none;
+}
+
+h1 {
+    font-size: 4vw;
+}
+
+sub {
+    font-size: 2vw;
+}
+
+.homePage, .aboutMe, .portfolio {
+    background-color: #999999;
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+
+}
+
+.homeText, .aboutText, .portfolioText {
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        height: 95px;
+    }
+    body {
+        background-color: #444444;
+    }
+    .navLinks a {
+        display: none;
+        position: fixed;
+        height: 25px;
+    }
+    .hamburgerMenu {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+    .hamburgerMenu div {
+        display: block;
+    }
+}
