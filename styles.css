@@ -5,6 +5,7 @@
 body {
     margin: 0 auto;
     text-align: center;
+    background-color: #444444;
 }
 
 nav {
@@ -15,7 +16,7 @@ nav {
     height: 100px;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 a.anchor {
@@ -49,12 +50,32 @@ sub {
     font-size: 2vw;
 }
 
+.contactIcons {
+    margin-top: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.gitHub, .twitter, .email, .linkedIn {
+    background-color: #999999;
+    position: relative;
+    width: 10%;
+    padding-top:5.6%;
+}
+
 .homePage, .aboutMe, .portfolio {
     background-color: #999999;
     position: relative;
     width: 100%;
     padding-top: 56.25%;
 
+}
+
+.aboutMe {
+   z-index: 1;
 }
 
 .homeText, .aboutText, .portfolioText {
@@ -65,24 +86,94 @@ sub {
     transform: translate(-50%, -50%);
 }
 
+.aboutMeBoxes {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    width: 300px;
+    height: 100px;
+    text-decoration: none;
+    border-radius: 8px;
+    color: #00ffff;
+    background-color: #444444;
+}
+
+
+.projectBlock {
+    display: inline-block;
+    width: 100%;
+    height: 600px;
+    background: #777777;
+    border: 2px solid #987654;
+}
+
+.spacer {
+    height: 500px;
+}
+
+.project {
+    display: inline-block;
+    width: 30%;
+    height: 300px;
+    background: #777777;
+    border-bottom: 5px solid #999999;
+}
+
+.projectSummary {
+    display: inline-block;
+    width: 30%;
+    height: 300px;
+    background: #444444;
+    border-bottom: 5px solid #999999;
+}
+
 @media screen and (max-width: 768px) {
     nav {
         height: 95px;
     }
-    body {
-        background-color: #444444;
-    }
+
     .navLinks a {
         display: none;
         position: fixed;
         height: 25px;
     }
+
     .hamburgerMenu {
         position: sticky;
         top: 0;
         z-index: 1;
     }
+
     .hamburgerMenu div {
         display: block;
+    }
+
+    input {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .aboutMe {
+        height: 800px;
+    }
+
+    .aboutMeBoxes {
+        position: absolute;
+        top: 58%;
+    }
+    .projectBox {
+        display: block;
+        margin: 0 auto;
+        width: 60%;
+        height: 200px;
+     }
+    .gitHub, .twitter, .email, .linkedIn {
+        display: none;
     }
 }
