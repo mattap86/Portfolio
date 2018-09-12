@@ -13,8 +13,6 @@ a.anchor {
     visibility: hidden;
 }
 
-
-
 .contactMenu {
     background: transparent;
     width: 100%;
@@ -47,7 +45,7 @@ a.anchor {
 
 .gitHub, .twitter, .email, .linkedIn {
     background: transparent;
-    width: 10%;
+    width: 22.5%;
 }
 
 .hero {
@@ -73,16 +71,10 @@ a.anchor {
     box-shadow: 5px 5px #222222;
     border-radius: 25px;
     margin: 8px;
-    z-index: 0;
+    z-index: -1;
 }
 
-.homeText, .aboutText {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2vw;
-}
+
 
 .portfolioText {
     background-color: #999999;
