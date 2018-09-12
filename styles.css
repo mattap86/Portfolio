@@ -13,51 +13,34 @@ a.anchor {
     visibility: hidden;
 }
 
-.contactMenu {
-    background: transparent;
-    width: 100%;
-    height: 0;
-    position: sticky;
-    top: 90%;
-    z-index: 1;
+.heroImage {
+    background-image: url("Images/hero.png");
+    background-size: cover;
+    height: 650px;
+    border-radius: 25px;
+    margin: 2px;
 }
 
 #contactIcons {
     display: table;
-    margin: 0 auto;
-    background: transparent;
 }
 
 #contactLinks {
     list-style: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
 }
 
 #contactLinks li {
-    display: inline-block;
+    float: right;
 }
-
-#contactLinks a {
-    padding-left: 40px;
-    padding-right: 40px;
-    margin: 0 auto;
-    text-decoration: none;
-}
-
 .gitHub, .twitter, .email, .linkedIn {
-    background: transparent;
-    width: 22.5%;
+    width: 60%;
+
 }
 
-.hero {
-    position: relative;
-}
-
-.heroImage {
-    width: 99%;
-    height: 650px;
-    border-radius: 25px;
-    margin-top: 10px;
-}
 
 .homePage {
     position: relative;
@@ -68,13 +51,11 @@ a.anchor {
     height: 650px;
     position: relative;
     border: 1px solid #444444;
-    box-shadow: 5px 5px #222222;
+    box-shadow: 5px 10px 10px #666666;
     border-radius: 25px;
     margin: 8px;
     z-index: -1;
 }
-
-
 
 .portfolioText {
     background-color: #999999;
@@ -94,9 +75,10 @@ button {
     width: 300px;
     height: 100px;
     text-decoration: none;
-    border-radius: 8px;
-    color: #00ffff;
-    background-color: #444444;
+    border-radius: 12px;
+    color: #444444;
+    background-color: #dd6600;
+
 }
 
 .projectBlocks {
@@ -124,7 +106,7 @@ button {
 }
 @media screen and (max-width: 698px) {
     .aboutMe {
-        height: 800px;
+        margin: 3px;
     }
 
     .aboutMeBoxes {
@@ -142,6 +124,14 @@ button {
         height: 200px;
     }
     .gitHub, .twitter, .email, .linkedIn {
-        display: none;
+        /*display: none;*/
+        width: 30%;
+
+    }
+    #contactLinks {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
     }
 }
