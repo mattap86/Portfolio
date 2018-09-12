@@ -1,0 +1,155 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    text-align: center;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    visibility: hidden;
+}
+
+.heroImage {
+    background-image: url("Images/hero.png");
+    background-size: cover;
+    height: 650px;
+    border-radius: 25px;
+    margin: 2px;
+}
+
+#contactIcons {
+    display: table;
+}
+
+#contactLinks {
+    list-style: none;
+    position: fixed;
+    bottom: 0;
+    right: 10;
+    z-index: 1;
+}
+
+#contactLinks li {
+    float: right;
+}
+
+.gitHub, .twitter, .email, .linkedIn {
+    width: 60%;
+}
+
+.homePage {
+    position: relative;
+}
+
+.aboutMe {
+    width: 98.5%;
+    height: 650px;
+    position: relative;
+    border: 1px solid #444444;
+    box-shadow: 5px 10px 10px #666666;
+    border-radius: 25px;
+    margin: 8px;
+    z-index: -1;
+}
+
+.portfolioText {
+    background-color: #999999;
+    padding: 25px;
+}
+
+.aboutMeBoxes {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input {
+    width: 300px;
+    height: 100px;
+    text-decoration: none;
+    border-radius: 12px;
+    color: #444444;
+    background-color: #dd6600;
+}
+
+.projectBlocks {
+    display: inline-block;
+    width: 100%;
+    background: #999999;
+    padding: 30px;
+}
+
+.projectBox {
+    float: left;
+    width: 25%;
+    height: 190px;
+    border-bottom: 5px solid #999999;
+}
+
+.projectPics:hover {
+    opacity: 1;
+}
+
+.projectPics {
+    opacity: 0.3;
+    width: 100%;
+    height: 200;
+}
+
+footer {
+    display: inline-block;
+    width: 100%;
+    height: 100px;
+    background-image: url("Images/wolf.png");
+    background-size: cover;
+}
+
+.rocket {
+    background-image: url("Images/rocket.png");
+    width: 75px;
+    height: 75px;
+    float: right;
+    margin: 20px 20px 0 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+@media screen and (max-width: 698px) {
+    .aboutMe {
+        margin: 3px;
+    }
+
+    .aboutMeBoxes {
+        position: absolute;
+        top: 58%;
+    }
+
+    .projectBox, .projectPics {
+        float: left;
+        width: 100%;
+        height: 300px;
+     }
+
+    .projectSummary {
+        height: 200px;
+    }
+
+    .gitHub, .twitter, .email, .linkedIn {
+        width: 30%;
+    }
+
+    #contactLinks {
+        position: fixed;
+        right: 10;
+        bottom: 0;
+        margin: 0 auto;
+    }
+}
