@@ -29,18 +29,17 @@ a.anchor {
     list-style: none;
     position: fixed;
     bottom: 0;
-    right: 0;
+    right: 10;
     z-index: 1;
 }
 
 #contactLinks li {
     float: right;
 }
+
 .gitHub, .twitter, .email, .linkedIn {
     width: 60%;
-
 }
-
 
 .homePage {
     position: relative;
@@ -71,14 +70,13 @@ a.anchor {
     transform: translate(-50%, -50%);
 }
 
-button {
+input {
     width: 300px;
     height: 100px;
     text-decoration: none;
     border-radius: 12px;
     color: #444444;
     background-color: #dd6600;
-
 }
 
 .projectBlocks {
@@ -104,6 +102,26 @@ button {
     width: 100%;
     height: 200;
 }
+
+footer {
+    display: inline-block;
+    width: 100%;
+    height: 100px;
+    background-image: url("Images/wolf.png");
+    background-size: cover;
+}
+
+.rocket {
+    background-image: url("Images/rocket.png");
+    width: 75px;
+    height: 75px;
+    float: right;
+    margin: 20px 20px 0 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
 @media screen and (max-width: 698px) {
     .aboutMe {
         margin: 3px;
@@ -123,14 +141,14 @@ button {
     .projectSummary {
         height: 200px;
     }
-    .gitHub, .twitter, .email, .linkedIn {
-        /*display: none;*/
-        width: 30%;
 
+    .gitHub, .twitter, .email, .linkedIn {
+        width: 30%;
     }
+
     #contactLinks {
         position: fixed;
-        right: 0;
+        right: 10;
         bottom: 0;
         margin: 0 auto;
     }

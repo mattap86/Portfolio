@@ -46,7 +46,14 @@ body {
     text-shadow: 5px 5px 10px #444444;
 }
 
-@media screen and (max-width: 728px) {
+.footNote {
+    font-family: "Bodoni 72 Oldstyle";
+    background: transparent;
+    padding: 20px;
+
+}
+
+@media screen and (max-width: 698px) {
     .homeText {
         font-size: 2.9vw;
     }
