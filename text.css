@@ -1,0 +1,21 @@
+body {
+    font-family: "Bodoni 72 Oldstyle";
+}
+
+h1 {
+    /*CANT CHANGE FONT SIZE!!*/
+    /*font-size: 5vw;*/
+    background: -webkit-linear-gradient(#333, #eee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 5px 5px 10px #444444;
+}
+
+sub {
+    /*CANT CHANGE FONT SIZE*/
+    /*font-size: 3vw;*/
+    background: -webkit-linear-gradient(#fff, #000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 5px 5px 10px #444444;
+}

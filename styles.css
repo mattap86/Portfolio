@@ -7,32 +7,13 @@ body {
     text-align: center;
 }
 
-.hero {
-    position: relative;
-}
-
 a.anchor {
     display: block;
     position: relative;
     visibility: hidden;
 }
 
-h1 {
-    /*CANT CHANGE FONT SIZE!!*/
-    /*font-size: 5vw;*/
-    background: -webkit-linear-gradient(#333, #eee);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 5px 5px 10px #444444;
-}
 
-sub {
-    /*CANT CHANGE FONT SIZE*/
-    /*font-size: 3vw;*/
-    background: -webkit-linear-gradient(#333, #eee);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
 .contactMenu {
     background: transparent;
@@ -56,6 +37,7 @@ sub {
 #contactLinks li {
     display: inline-block;
 }
+
 #contactLinks a {
     padding-left: 40px;
     padding-right: 40px;
@@ -66,21 +48,37 @@ sub {
 .gitHub, .twitter, .email, .linkedIn {
     background: transparent;
     width: 10%;
+}
 
+.hero {
+    position: relative;
 }
 
 .heroImage {
-    width: 100%;
-    border-radius: 30px;
+    width: 99%;
+    height: 650px;
+    border-radius: 25px;
+    margin-top: 10px;
 }
 
-.homePage, .aboutMe{
+.homePage {
     position: relative;
+}
+
+.aboutMe {
+    width: 98.5%;
+    height: 650px;
+    position: relative;
+    border: 1px solid #444444;
+    box-shadow: 5px 5px #222222;
+    border-radius: 25px;
+    margin: 8px;
+    z-index: 0;
 }
 
 .homeText, .aboutText {
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2vw;
