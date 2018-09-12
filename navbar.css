@@ -1,0 +1,69 @@
+nav {
+    background: transparent;
+    width: 100%;
+    height: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.menu {
+    display: table;
+    margin: 0 auto;
+    background: transparent;
+}
+
+#navLinks {
+    list-style: none;
+}
+
+#navLinks li {
+    display: inline-block;
+}
+
+#navLinks  a {
+    font-size: 36px;
+    background: -webkit-linear-gradient(#eee, #222);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+#navLinks a:hover {
+    background: -webkit-linear-gradient(#222, #eee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hamburgerMenu {
+    position: absolute;
+    top: 0;
+    padding-top: 20px;
+}
+
+.hamburgerMenu div {
+    width: 35px;
+    height: 5px;
+    background: -webkit-linear-gradient(#eee, #333);
+    border-radius: 12px;
+    margin: 6px auto;
+    display: none;
+}
+
+.hamburgerMenu div:hover {
+    background: -webkit-linear-gradient(#333, #eee);
+}
+
+/*NAVBAR ICON RESIZING FOR MOBILE DEVICES*/
+@media screen and (max-width: 698px) {
+    #navLinks a {
+        display: none;
+    }
+
+    .hamburgerMenu div {
+        display: block;
+    }
+}
