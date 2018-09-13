@@ -1,5 +1,6 @@
 * {
 	box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -21,6 +22,11 @@ a.anchor {
     margin: 2px;
 }
 
+.hero {
+    position: relative;
+    z-index: 2;
+}
+
 #contactIcons {
     display: table;
 }
@@ -30,7 +36,6 @@ a.anchor {
     position: fixed;
     bottom: 0;
     right: 10;
-    z-index: 1;
 }
 
 #contactLinks li {
@@ -53,7 +58,7 @@ a.anchor {
     box-shadow: 5px 10px 10px #666666;
     border-radius: 25px;
     margin: 8px;
-    z-index: -1;
+    overflow: auto;
 }
 
 .portfolioText {
@@ -63,21 +68,41 @@ a.anchor {
 
 .aboutMeBoxes {
     width: 100%;
-    height: 100px;
-    position: absolute;
-    top: 75%;
+    height: 50px;
+    position: relative;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-input {
-    width: 300px;
-    height: 100px;
+button {
+    width: 80%;
+    height: 50px;
     text-decoration: none;
     border-radius: 12px;
     color: #444444;
     background-color: #dd6600;
 }
+
+/*HAVENT BEEN ABLE TO GET THE HOVER TO DISPLAY TEXT FUNSTION TO WORK*/
+/*.buttonContent {*/
+    /*width: 80%;*/
+    /*height: 75px;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*visibility: hidden;*/
+    /*opacity: 0;*/
+    /*color: #444444;*/
+/*}*/
+
+/*button:hover .buttonContent {*/
+    /*visibility: visible;*/
+    /*opacity: 1;*/
+/*}*/
+/*END OF HOVER DISPLAY TEXT FUNCTION */
 
 .projectBlocks {
     display: inline-block;
@@ -120,6 +145,7 @@ footer {
     position: fixed;
     bottom: 0;
     right: 0;
+    z-index: 1;
 }
 
 @media screen and (max-width: 698px) {

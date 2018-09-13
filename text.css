@@ -25,32 +25,37 @@ body {
 }
 
 .aboutText {
+    width: 100%;
     position: absolute;
-    top: 35%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.3vw;
 }
 
 .aboutText h1 {
     background: -webkit-linear-gradient(#333, #eee);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 5px 5px 10px #444444;
+    text-shadow: 5px 5px 5px #444444;
 }
 
-.aboutText sub {
-    background: -webkit-linear-gradient(#eee, #333);
+.aboutText p {
+    background: -webkit-linear-gradient(#000, #777);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 5px 5px 10px #444444;
+    text-shadow: 5px #444444;
+    font-size: 18px;
+}
+
+.portfolioText {
+    background-color: #999999;
+    padding: 25px;
 }
 
 .footNote {
     font-family: "Bodoni 72 Oldstyle";
     background: transparent;
     padding: 20px;
-
 }
 
 @media screen and (max-width: 698px) {
