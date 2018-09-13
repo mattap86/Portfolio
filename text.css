@@ -50,12 +50,24 @@ p {
 }
 
 .portfolioText {
-    background-color: #999999;
-    padding: 25px;
+    background-color: transparent;
+    background: -webkit-linear-gradient(#dd7500, #222);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h4, h5 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #dd7500;
+    text-align: center;
+    font-size: 12px;
+    width: 80%;
 }
 
 .footNote {
-    font-family: "Bodoni 72 Oldstyle";
     background: transparent;
     padding: 20px;
 }

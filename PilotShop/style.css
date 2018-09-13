@@ -1,0 +1,405 @@
+* {
+	box-sizing: border-box: 
+}
+
+body {
+	margin: 0;
+}
+
+.topnav {
+    background-color: #f8f8f8;
+	padding: 5px 5px;
+	font-family: arial black;
+	font-size: 0.85rem;
+}
+
+.topnav a {
+    float: left;
+    color: #b7b7b8;
+	background: #f8f8f8;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+.tel {
+	margin-left: 8%;
+}
+
+.topnav_search {
+	float: right;
+	padding: 0px 15px;
+	margin: 0px;
+	text-decoration: none;
+	border: none;
+}
+
+.search_boxes {
+	color: #b7b7b5;
+	background: #f8f8f8;
+	border: 0;
+	padding: 10px 10px;
+	font-family: arial black;
+	float: right;
+}
+
+.topnav a:hover {
+    color: #6a9fcc;
+}
+
+.account {
+	margin-left: 25%;
+}
+
+.mag {
+	width: 20px;
+	height: 20px;
+	padding: 10px 10px;
+	float: right;
+}
+
+.mag:hover {
+	color: #6a9fcc;
+}
+
+.bag {
+	color: #b7b7b8;
+	width: 20px;
+	height: 20px;
+	padding: 8px 8px;
+}
+
+.logo {
+	float: left;
+	padding: 25px;
+}
+
+.lownav {
+    background: #ffffff;
+    overflow: auto;
+	font-family: arial-black;
+	font-size: 0.85rem;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+.lownav a {
+	color: #000000;
+    background: #ffffff;
+    overflow: auto;
+	margin: 20px;
+	padding: 20px 20px;
+	font-family: arial-black;
+	font-size: 0.9rem;
+	text-decoration: none;
+	float: right;
+}
+
+.lownav a:hover {
+	border: 2px black solid;
+}
+
+.home {
+	border: 2px black solid;
+}
+
+.phonepic {
+	height: 600px;
+	width: 100%;
+}
+
+.hero{
+	position: relative;
+	height: 500px;
+	background-image: url("https://cdn.shopify.com/s/files/1/1634/8185/t/2/assets/slide2_image.jpg?2758736031345149969");
+}
+
+.header h1 {
+	position: absolute;
+	top: 40px;
+	left: 25%;
+	height: 200px;
+	width: 800px;
+	color: #ffffff;
+	font-size: 72px;
+	font-family: arial;
+}
+
+.header h3 {
+	position: absolute;
+	top: 200px;
+	left: 35.5%;
+	height: 200px;
+	width: 800px;
+	color: #ffffff;
+	font-size: 1rem;
+	font-family: arial;
+}
+
+.header button {
+	position: absolute;
+	top: 330px;
+	left:42.5%;
+	width: 125px;
+	color: #ffffff;
+	background: transparent;
+	padding: 20px;
+	border: 2px solid #ffffff;
+	font-family: arial black;
+}
+
+.header button:hover {
+	background: #65add4;
+}
+
+.col-3 {
+	position: absolute;
+	bottom: -100px;
+	width: 900px;
+	margin: 0 20%;
+	font-family: arial;
+	color: #ffffff;
+}
+
+.col-3 .highlight {
+	float: left;
+	width: 250px;
+	height: 200px;
+	margin: 25px;
+	background-size: contain;
+	background-color: red;
+}
+
+.col-3 .highlightLeft {
+	background-image: url("https://cdn.shopify.com/s/files/1/1634/8185/t/2/assets/custom_showcase4_img.jpg?2758736031345149969");
+}
+
+.col-3 .leftshopnow {
+	position: absolute;
+	top: 170px;
+	left: 13%;
+	font-family: arial black;
+	font-size: 1rem;
+	background: transparent;
+	border: transparent;
+	color: #7dd4ee;
+}
+
+.col-3 .leftshopnow:hover {
+	border: 1px #ffffff solid;
+	color: #ffffff;
+}
+
+.col-3 .centershopnow {
+	position: absolute;
+	top: 170px;
+	left: 46%;
+	font-family: arial black;
+	font-size: 1rem;
+	background: transparent;
+	color: #3b3b3b;
+}
+
+.col-3 .centershopnow:hover {
+	border: 1px #ffffff solid;
+	color: #ffffff;
+}
+
+.col-3 .rightshopnow {
+	position: absolute;
+	top: 170px;
+	left: 80%;
+	font-family: arial black;
+	font-size: 1rem;
+	background: transparent;
+	color: #4584af;
+}
+
+.col-3 .rightshopnow:hover {
+	border: 1px #ffffff solid;
+	color: #ffffff;
+}
+
+.featprod {
+	font-family: arial black;
+	font-size: 1.5rem;
+	position: absolute;
+	top: 950px;
+	left: 38.5%;
+}
+
+.productsline1 {
+	padding: 20px;
+	margin-left: 3%;
+	font-family: arial;
+	text-align: center;
+}
+
+.productsline2 {
+	width: stretch;
+	height: 600px;
+	padding: 20px;
+	margin-left: 3%;
+	font-family: arial;
+	text-align: center;
+}
+
+.productsline1 span {
+	color: #4584af;
+	font-size: 1rem;
+}
+
+.productsline2 span {
+	color: #4584af;
+	font-size: 1rem;
+}
+.akgheadset {
+	position: relative;
+	height: 500px;
+	float: left;
+	width: 20%;
+	margin: 25px;
+}
+
+.jacket {
+	position: relative;
+	height: 500px;
+	float: left;
+	width: 20%;
+	margin: 25px;
+}
+
+.aviators {
+	position: relative;
+	height: 500px;
+	float: left;
+	width: 20%;
+	margin: 25px;
+}
+
+.aspen {
+	position: relative;
+	height: 500px;
+	float: left;
+	width: 20%;
+	margin: 25px;
+}
+
+.avidyne {
+	position: relative;
+	float: left;
+	width: 20%;
+	margin: 25px;
+}
+
+.cocoons {
+	position: relative;
+	float: left;
+	width: 20%;
+	margin: 25px;
+}
+
+.davidheadset {
+	position: relative;
+	float: left;
+	width: 20%;
+	margin: 25px;
+}
+
+.garmin {
+	position: relative;
+	float: left;
+	width: 20%;
+	margin: 25px;
+}
+
+.rightbtn {
+	position: absolute;
+	top: 1%;
+	right: 1%;
+	color: #ffffff;
+	background: #4584af;
+	border-radius: 50%;
+	padding: 20px;
+	text-decoration: none;
+}
+
+.leftbtn1 {
+	position: absolute;
+	top: 1%;
+	left: 1%;
+	color: #ffffff;
+	background: #d13d39;
+	border-radius: 50%;
+	padding: 20px;
+	text-decoration: none;
+}
+
+.leftbtn3 {
+	position: absolute;
+	top: 1%;
+	left: 1%;
+	color: #ffffff;
+	background: #d13d39;
+	border-radius: 50%;
+	padding: 20px;
+	text-decoration: none;
+}
+
+.leftbtn4 {
+	position: absolute;
+	top: 1%;
+	left: 1%;
+	color: #ffffff;
+	background: #d13d39;
+	border-radius: 50%;
+	padding: 20px;
+	text-decoration: none;
+}
+.leftbtn6 {
+	position: absolute;
+	top: 1%;
+	left: 1%;
+	color: #ffffff;
+	background: #d13d39;
+	border-radius: 50%;
+	padding: 20px;
+	text-decoration: none;
+}
+
+.leftbtn7 {
+	position: absolute;
+	top: 1%;
+	left: 1%;
+	color: #ffffff;
+	background: #d13d39;
+	border-radius: 50%;
+	padding: 20px;
+	text-decoration: none;
+}
+
+.fixedbar {
+	width: 80px;
+	padding: 0px 80px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	border-radius: 8px 8px 0px 0px;
+	border: 2px #4584af solid;
+	background: #4584af;
+	text-align: center;
+	font-size: 1rem;
+}
+
+@media screen and (max-width: 1000px){
+	body {
+		width: 600px;
+	}
+	.lownav {
+		display: none;
+	}
+	.main {
+		width: 600px;
+	}
+}
+
