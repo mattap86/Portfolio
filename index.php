@@ -1,12 +1,16 @@
+<?php require 'php/edit.php'; ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>Matt Tapley</title>
-    <link rel="stylesheet" type="text/css" href="normalise.css">
-    <link rel="stylesheet" type="text/css" href="navbar.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="text.css">
+    <link rel="stylesheet" type="text/css" href="css/normalise.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/text.css">
 </head>
 <body>
 <a class="anchor" id="home"></a>
@@ -49,11 +53,11 @@
     <div class="aboutMe" id="about">
         <section class="container">
             <h1>ABOUT ME</h1>
-            <p>Having worked at the height of the hospitality industry for a good portion of my career, I took the life changing decision to step out of the ever fast-paced, often chaotic world of catering, and into the alien world of software/web development. The idea is to incorporate my vast knowledge of people and their needs with the functional possibilities of software development to create tools, innovated & designed by people's needs and everyday obstacles. </p>
+            <p><?php echo $bio; ?></p>
                 <button>INTERESTS</button>
-                <p class="buttonContent">So to start with the usual, I'm a keen runner, I love historical fiction novels, have an eclectic music taste, my preferred sports are pool, golf and tennis with a little cricket thrown in when the opportunity pops up. A major hobby (if you can call it that) is puzzling. Be it crosswords, logic or mathematics, there is generally one next to me wherever I am... Hopefully this will lend itself well to my desired future in software develpment.</p>
+                <p class="buttonContent"><?php echo $interests; ?></p>
                 <button>QUALIFICATIONS & ACCOLADES</button>
-                <p class="buttonContent">Having left school part-way through my AS levels due to thinking £300 a week as a chef was a damn fine wage, my academic achievements are limited to an average spread of GCSEs. However, I have passed the WSET (Wine & Spirit Education Trust) lvl 2 course and have a personal license (retail of alcohol). A more pertinent qualification currently would be my Scrum Master Certification.</p>
+                <p class="buttonContent"><?php echo $qualifications; ?></p>
                 <button>SOMETHING ELSE ABOUT ME</button>
                 <p class="buttonContent">If I think of anything I'll let you know...</p>
         </section>
