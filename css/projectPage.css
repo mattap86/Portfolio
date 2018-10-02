@@ -1,0 +1,10 @@
+body html {
+    height: 100%;
+}
+
+.bg {
+    height: 100%;
+    background-image: url("Images/futureProjectOne.png");
+    background-size: cover;
+}
+}
