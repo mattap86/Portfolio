@@ -12,16 +12,16 @@ function dbconn() {
     return $db;
 }
 
-/*
- * This function validates and sanitises the variable passed into it and ensures that it is a string
- *
- * @param string $data is the input that needs validating and sanitising
- *
- * @return string returns the validated and sanitised string
- */
-function validateString(string $data) : string {
-    return filter_var($data, FILTER_SANITIZE_STRING);
-}
+///*
+// * This function validates and sanitises the variable passed into it and ensures that it is a string
+// *
+// * @param string $data is the input that needs validating and sanitising
+// *
+// * @return string returns the validated and sanitised string
+// */
+//function validateString(string $data) : string {
+//    return filter_var($data, FILTER_SANITIZE_STRING);
+//}
 
 /*
  * This function updates the fields in the table `about_me` defined after the SET function of the query
@@ -36,16 +36,9 @@ function validateString(string $data) : string {
  *
  * @return boolean $updateAboutMe returns true if the query is executed
  */
-function updateAboutMe(string $validatedBio, string $validatedInterests, string $validatedQualifications, PDO $db) : int {
-
-    $updateAboutMe = $db->prepare("UPDATE `about_me` SET `bio` = '$validatedBio', `interests` = :updatedInterests, `qualifications` = :updatedQualifications WHERE id='1'");
-
-    $updateAboutMe->bindParam(':updatedBio', $validatedBio);
-    $updateAboutMe->bindParam(':updatedInterests', $validatedInterests);
-    $updateAboutMe->bindParam(':updatedQualifications', $validatedQualifications);
-
-    $newPostData = $updateAboutMe->execute();
-    return $newPostData;
+function updateAboutMe(string $validatedBio, string $validatedInterests, string $validatedQualifications, PDO $db) {
+    $updateAboutMe = $db->prepare("UPDATE `about_me` SET `bio` = ?, `interests` = ?, `qualifications` = ? WHERE id='1'");
+    $updateAboutMe->execute([$validatedBio, $validatedInterests, $validatedQualifications]);
 }
 
 /*

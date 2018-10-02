@@ -4,22 +4,24 @@ require 'functions.php';
 
 $db = dbconn();
 
-$updatedBio = $_POST['newBio'];
-$updatedInterests = $_POST['newInterests'];
-$updatedQualifications = $_POST['newQualifications'];
+if (isset($_POST['newBio'])) {
+    $validatedBio = filter_var($_POST['newBio'], FILTER_SANITIZE_STRING);
+}
 
-var_dump($updatedBio);
-//$validatedBio = validateString($updatedBio);
-//$validatedInterests = validateString($updatedInterests);
-//$validatedQualifications = validateString($updatedQualifications);
-//
-//updateAboutMe($updatedBio, $updatedInterests, $updatedQualifications, $db);
+if (isset($_POST['newInterests'])) {
+    $validatedInterests = filter_var($_POST['newInterests'], FILTER_SANITIZE_STRING);
+}
 
+if (isset($_POST['newQualifications'])) {
+    $validatedQualifications = filter_var($_POST['newQualifications'], FILTER_SANITIZE_STRING);
+}
+
+if (isset($validatedBio, $validatedInterests, $validatedQualifications, $db)) {
+    updateAboutMe($validatedBio, $validatedInterests, $validatedQualifications, $db);
+}
 
 $dbResult = getDbAboutMe($db);
 
 $bio = selectBioFromResults($dbResult);
 $interests = selectInterestsFromResults($dbResult);
 $qualifications = selectQualificationsFromResults($dbResult);
-
-

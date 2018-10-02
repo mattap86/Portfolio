@@ -11,7 +11,7 @@ require '../php/edit.php';
     <title>CMS Admin</title>
 </head>
 <body>
-    <form action="edit.php" method="post">
+    <form action="admin.php" method="post">
         <h1>UPDATE ABOUT ME</h1>
         <div>
             <label>Bio :</label>
