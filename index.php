@@ -1,4 +1,4 @@
-<?php require 'php/edit.php'; ?>
+<?php require 'php/update.php'; ?>
 
 
 <!DOCTYPE html>
@@ -80,7 +80,7 @@
             </div>
             <div class="projectTwo">
                 <div class="projectBox">
-                    <a href="file:///Users/academy/Desktop/Portfolio/new-project.html"><img class="projectPics" src="Images/comingsoon.png" alt="Coming Soon"></a>
+                    <a href="file:///Users/academy/Desktop/Portfolio/html/new-project.html"><img class="projectPics" src="Images/comingsoon.png" alt="Coming Soon"></a>
                 </div>
                 <div class="projectSummary projectBox">
                     <h4>COMING SOON...</h4>
@@ -88,7 +88,7 @@
             </div>
             <div class="projectThree">
                 <div class="projectBox">
-                    <a href="file:///Users/academy/Desktop/Portfolio/new-project.html"><img class="projectPics" src="Images/comingsoon.png" alt="Coming Soon"></a>
+                    <a href="file:///Users/academy/Desktop/Portfolio/html/new-project.html"><img class="projectPics" src="Images/comingsoon.png" alt="Coming Soon"></a>
                 </div>
                 <div class="projectSummary projectBox">
                     <h4>COMING SOON...</h4>
