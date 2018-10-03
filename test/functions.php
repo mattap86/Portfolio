@@ -13,16 +13,8 @@ class StackTest extends TestCase
      */
     public function testSelectBioFromResultsSuccess()
     {
-        $expected = "Having worked at the height of the hospitality industry for a good portion of my career, I took the
-         life changing decision to step out of the ever fast-paced, often chaotic world of catering, and into the alien 
-         world of software/web development. The idea is to incorporate my vast knowledge of people and their needs with 
-         the functional possibilities of software development to create tools, innovated & designed by people's needs 
-         and everyday obstacles.";
-        $example = ["bio" => "Having worked at the height of the hospitality industry for a good portion of my career, 
-        I took the life changing decision to step out of the ever fast-paced, often chaotic world of catering, and into 
-        the alien world of software/web development. The idea is to incorporate my vast knowledge of people and their 
-        needs with the functional possibilities of software development to create tools, innovated & designed by 
-        people's needs and everyday obstacles."];
+        $expected = "Some words in a string";
+        $example = ["bio" => "Some words in a string"];
         $case = selectBioFromResults($example);
         $this->assertEquals($case, $expected);
     }
@@ -61,16 +53,8 @@ class StackTest extends TestCase
      */
     public function testSelectInterestsFromResultsSuccess()
     {
-        $expected = "So to start with the usual, I'm a keen runner, I love historical fiction novels, have an eclectic 
-        music taste, my preferred sports are pool, golf and tennis with a little cricket thrown in when the opportunity 
-        pops up. A major hobby (if you can call it that) is puzzling. Be it crosswords, logic or mathematics, there is 
-        generally one next to me wherever I am... Hopefully this will lend itself well to my desired future in software 
-        develpment.";
-        $example = ["interests" => "So to start with the usual, I'm a keen runner, I love historical fiction novels, 
-        have an eclectic music taste, my preferred sports are pool, golf and tennis with a little cricket thrown in when
-         the opportunity pops up. A major hobby (if you can call it that) is puzzling. Be it crosswords, logic or 
-         mathematics, there is generally one next to me wherever I am... Hopefully this will lend itself well to my 
-         desired future in software develpment."];
+        $expected = "Some words in a string";
+        $example = ["interests" => "Some words in a string"];
         $case = selectInterestsFromResults($example);
         $this->assertEquals($case, $expected);
     }
@@ -108,14 +92,8 @@ class StackTest extends TestCase
      */
     public function testSelectQualificationsFromResultsSuccess()
     {
-        $expected = "Having left school part-way through my AS levels due to thinking £300 a week as a chef was a damn 
-        fine wage, my academic achievements are limited to an average spread of GCSEs. However, I have passed the WSET 
-        (Wine & Spirit Education Trust) lvl 2 course and have a personal license (retail of alcohol). A more pertinent 
-        qualification currently would be my Scrum Master Certification.";
-        $example = ["qualifications" => "Having left school part-way through my AS levels due to thinking £300 a week 
-        as a chef was a damn fine wage, my academic achievements are limited to an average spread of GCSEs. However, I 
-        have passed the WSET (Wine & Spirit Education Trust) lvl 2 course and have a personal license (retail of 
-        alcohol). A more pertinent qualification currently would be my Scrum Master Certification."];
+        $expected = "Some words in a string";
+        $example = ["qualifications" => "Some words in a string"];
         $case = selectQualificationsFromResults($example);
         $this->assertEquals($case, $expected);
     }

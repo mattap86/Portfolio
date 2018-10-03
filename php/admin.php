@@ -30,9 +30,9 @@ require '../php/edit.php';
         </div>
         <div>
             <h1>CREATE / REMOVE PROJECT</h1>
-            <label>New Project</label>
+            <label>New Project :</label>
             <input type="radio" name="addDeleteProject" checked />
-            <label>Delete Project</label>
+            <label>Delete Project :</label>
             <input type="radio" name="addDeleteProject" />
         </div>
         <div>
@@ -50,6 +50,9 @@ require '../php/edit.php';
         <div>
             <label>Project Summary :</label>
             <textarea name="newProjectSummary" rows="10" cols="100" maxlength="600" placeholder="Max 600 characters..."></textarea>
+        </div>
+        <div>
+            <input type="submit" name="Add Project" />
         </div>
     </form>
 </body>

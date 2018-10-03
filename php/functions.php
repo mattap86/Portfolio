@@ -30,6 +30,27 @@ function updateAboutMe(string $validatedBio, string $validatedInterests, string 
     $updateAboutMe->execute([$validatedBio, $validatedInterests, $validatedQualifications]);
 }
 
+function uploadProject(string $validatedProjectName, string $validatedImageUrl, string $validatedProjectUrl, string $validatedProjectSummary, PDO $db) {
+    $uploadProjectQuery = $db->prepare("INSERT INTO `projects`(`name`, `image_url`, `url`, `summary`) VALUES (?,?,?,?);");
+    $uploadProjectQuery->execute([$validatedProjectName, $validatedImageUrl, $validatedProjectUrl, $validatedProjectSummary]);
+}
+
+function getDbProject(PDO $db) {
+    $projectQuery = $db->prepare("SELECT `name`, `image_url`, `url`, `summary` FROM `projects`;");
+    $projectQuery->execute();
+    $projectResult = $projectQuery->fetchAll();
+    return $projectResult;
+}
+
+//function displayProjects($projectResult) {
+//    $result = '';
+//    foreach ($projectResult as $row) {
+//        if ($projectResult['deleted'] === 1) {
+//            $result .=
+//        }
+//    }
+//}
+
 /*
  * This function retrieves the data from the selected fields in the about_me table of the portfolio database
  *
