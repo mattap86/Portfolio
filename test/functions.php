@@ -38,7 +38,7 @@ class StackTest extends TestCase
         have an eclectic music taste, my preferred sports are pool, golf and tennis with a little cricket thrown in when
          the opportunity pops up. A major hobby (if you can call it that) is puzzling. Be it crosswords, logic or 
          mathematics, there is generally one next to me wherever I am... Hopefully this will lend itself well to my 
-         desired future in software develpment."];
+         desired future in software development."];
         $case = selectBioFromResults($example);
         $this->assertEquals($case, $expected);
     }

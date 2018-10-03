@@ -1,18 +1,58 @@
 <?php
 
 /*
+ * This function creates the connection from the database 'portfolio' and sets the default fetch mode to
+ * associative array
+ *
+ * @return array returns the database
+ */
+function dbconn() {
+    $db = new PDO('mysql:host=127.0.0.1;dbname=portfolio', 'root');
+    $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    return $db;
+}
+
+///*
+// * This function validates and sanitises the variable passed into it and ensures that it is a string
+// *
+// * @param string $data is the input that needs validating and sanitising
+// *
+// * @return string returns the validated and sanitised string
+// */
+//function validateString(string $data) : string {
+//    return filter_var($data, FILTER_SANITIZE_STRING);
+//}
+
+/*
+ * This function updates the fields in the table `about_me` defined after the SET function of the query
+ *
+ * @param string $updatedBio is the new string pulled from the admin.php bio textarea
+ *
+ * @param string $updatedInterests is the new string pulled from the admin.php interests textarea
+ *
+ * @param string $updatedQualifications is the new string pulled from the admin.php qualifications textarea
+ *
+ * @param object $db is the database being updated by the function
+ *
+ * @return boolean $updateAboutMe returns true if the query is executed
+ */
+function updateAboutMe(string $validatedBio, string $validatedInterests, string $validatedQualifications, PDO $db) {
+    $updateAboutMe = $db->prepare("UPDATE `about_me` SET `bio` = ?, `interests` = ?, `qualifications` = ? WHERE id='1'");
+    $updateAboutMe->execute([$validatedBio, $validatedInterests, $validatedQualifications]);
+}
+
+/*
  * This function retrieves the data from the selected fields in the about_me table of the portfolio database
  *
  * @param array $db represents the database the data is pulled from
  *
  * @return array $about_me_result returns the first row of the executed query
  */
-function getAboutMe(PDO $db) : array
-{
-    $about_me_query = $db->prepare("SELECT `bio`, `interests`, `qualifications` FROM `about_me`;");
-    $about_me_query->execute();
-    $about_me_result = $about_me_query->fetch();
-    return $about_me_result;
+function getDbAboutMe(PDO $db) : array {
+    $aboutMeQuery = $db->prepare("SELECT `bio`, `interests`, `qualifications` FROM `about_me`;");
+    $aboutMeQuery->execute();
+    $aboutMeResult = $aboutMeQuery->fetch();
+    return $aboutMeResult;
 }
 
 /*
@@ -25,8 +65,7 @@ function getAboutMe(PDO $db) : array
  * @return string returns the string 'error' if the array represented in the variable passed into
  * the function does not containing a string assigned the key: 'bio'
  */
-function selectBioFromResults(array $result) : string
-{
+function selectBioFromResults(array $result) : string {
     if (array_key_exists('bio', $result)) {
         return $result['bio'];
     } else {
@@ -44,8 +83,7 @@ function selectBioFromResults(array $result) : string
  * @return string returns the string 'error' if the array represented in the variable passed into
  * the function does not containing a string assigned the key: 'interests'
  */
-function selectInterestsFromResults(array $result) : string
-{
+function selectInterestsFromResults(array $result) : string {
     if (array_key_exists('interests', $result)) {
         return $result['interests'];
     } else {
@@ -63,8 +101,7 @@ function selectInterestsFromResults(array $result) : string
  * @return string returns the string 'error' if the array represented in the variable passed into
  * the function does not containing a string assigned the key: 'qualifications'
  */
-function selectQualificationsFromResults(array $result) : string
-{
+function selectQualificationsFromResults(array $result) : string {
     if (array_key_exists('qualifications', $result)) {
         return $result['qualifications'];
     } else {

@@ -1,4 +1,4 @@
-<?php require 'php/update.php'; ?>
+<?php require 'php/edit.php'; ?>
 
 
 <!DOCTYPE html>
