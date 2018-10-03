@@ -1,6 +1,7 @@
 <?php
 
 require 'functions.php';
+require 'dbFunction.php';
 
 $db = dbconn();
 

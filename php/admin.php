@@ -2,7 +2,7 @@
 <?php
 
 require '../php/edit.php';
-
+require 'dbFunction.php';
 ?>
 
 <html lang="en">
