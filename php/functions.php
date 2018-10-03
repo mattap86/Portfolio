@@ -12,17 +12,6 @@ function dbconn() {
     return $db;
 }
 
-///*
-// * This function validates and sanitises the variable passed into it and ensures that it is a string
-// *
-// * @param string $data is the input that needs validating and sanitising
-// *
-// * @return string returns the validated and sanitised string
-// */
-//function validateString(string $data) : string {
-//    return filter_var($data, FILTER_SANITIZE_STRING);
-//}
-
 /*
  * This function updates the fields in the table `about_me` defined after the SET function of the query
  *
