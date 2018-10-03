@@ -125,4 +125,15 @@ class StackTest extends TestCase
         $case = selectBioFromResults($example);
         $this->assertEquals($case, $expected);
     }
+
+    /*
+     * This success test checks whether the function returns an associative array
+     */
+    public function testDisplayProjectsSuccess()
+    {
+        $expected = "../PilotShop/pilotshop.html";
+        $example = ['url' => "../PilotShop/pilotshop.html"];
+        $case = displayProjects($example);
+        $this->assertEquals($case, $expected);
+    }
 }
