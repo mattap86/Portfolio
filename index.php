@@ -1,4 +1,8 @@
-<?php require 'php/edit.php'; ?>
+<?php
+require_once 'php/edit.php';
+require_once 'php/functions.php';
+require_once 'php/dbFunction.php';
+?>
 
 
 <!DOCTYPE html>
@@ -70,30 +74,12 @@
             <div class="spacer"></div>
         </div>
         <div class="projectBlocks">
-            <div class="projectOne">
-                <div class="projectBox">
-                    <a href="file:///Users/academy/Desktop/PilotShop/pilotshop.html"><img class="projectPics" src="Images/pilotshop.png" alt="Pilot Shop Project"></a>
-                </div>
-                <div class="projectSummary projectBox">
-                    <h5>OUR FIRST PROPER ATTEMPT AT A WEBSITE BUILD! CERTAINLY NOT A FINISHED ARTICLE BY ANY MEANS BUT FELT LIKE A REAL ACHIEVEMENT SO EARLY ON IN THE COURSE. LEARNT A LOT OF LESSONS...</h5>
-                </div>
-            </div>
-            <div class="projectTwo">
-                <div class="projectBox">
-                    <a href="file:///Users/academy/Desktop/Portfolio/html/new-project.html"><img class="projectPics" src="Images/comingsoon.png" alt="Coming Soon"></a>
-                </div>
-                <div class="projectSummary projectBox">
-                    <h4>COMING SOON...</h4>
-                </div>
-            </div>
-            <div class="projectThree">
-                <div class="projectBox">
-                    <a href="file:///Users/academy/Desktop/Portfolio/html/new-project.html"><img class="projectPics" src="Images/comingsoon.png" alt="Coming Soon"></a>
-                </div>
-                <div class="projectSummary projectBox">
-                    <h4>COMING SOON...</h4>
-                </div>
-            </div>
+            <?php
+                $db = dbconn();
+                $var = getDbProject($db);
+                var_dump($var);
+                echo displayProjects($var);
+            ?>
         </div>
     </div>
 </body>
