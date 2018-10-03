@@ -126,10 +126,7 @@ class StackTest extends TestCase
      */
     public function testSelectQualificationsFromResultsFailureRelatedKey()
     {
-        $expected = "Having left school part-way through my AS levels due to thinking £300 a week as a chef was a damn 
-        fine wage, my academic achievements are limited to an average spread of GCSEs. However, I have passed the WSET 
-        (Wine & Spirit Education Trust) lvl 2 course and have a personal license (retail of alcohol). A more pertinent 
-        qualification currently would be my Scrum Master Certification.";
+        $expected = "error";
         $example = ["bio" => "Having worked at the height of the hospitality industry for a good portion of my career, 
         I took the life changing decision to step out of the ever fast-paced, often chaotic world of catering, and into 
         the alien world of software/web development. The idea is to incorporate my vast knowledge of people and their 
