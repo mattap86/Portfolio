@@ -128,8 +128,7 @@ function getDbProject(PDO $db) : array {
  *
  * @return array $result represents an individual project that is displayed dynamically through the foreach command
  */
-function displayProjects(array $projectResults) : string
-{
+function displayProjects(array $projectResults) : string {
     $result = '';
     foreach ($projectResults as $projectResult) {
         if (array_key_exists('url', $projectResult) && array_key_exists('image_url', $projectResult) && array_key_exists('summary', $projectResult)) {
@@ -145,7 +144,7 @@ function displayProjects(array $projectResults) : string
             return 'error';
         }
     }
-        return $result;
-    }
+    return $result;
+}
 
 

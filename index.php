@@ -1,7 +1,8 @@
 <?php
+
 require_once 'php/edit.php';
 require_once 'php/functions.php';
-require_once 'php/dbFunction.php';
+
 ?>
 
 

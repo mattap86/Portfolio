@@ -5,7 +5,7 @@ require_once 'functions.php';
 
 $db = dbconn();
 
-if($_POST['projectId']){
+if($_POST['projectId']) {
     $projectId = $_POST['projectId'];
     hideProject($projectId, $db);
 }
