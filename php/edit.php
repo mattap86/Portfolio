@@ -1,7 +1,7 @@
 <?php
 
-require 'functions.php';
-require 'dbFunction.php';
+require_once 'functions.php';
+require_once 'dbFunction.php';
 
 $db = dbconn();
 
@@ -21,7 +21,6 @@ if (isset($_POST['newQualifications'])) {
 if (isset($validatedBio, $validatedInterests, $validatedQualifications, $db)) {
     updateAboutMe($validatedBio, $validatedInterests, $validatedQualifications, $db);
 }
-
 
 //set of if statements to sanitise new project inputs from admin.php
 if (isset($_POST['newProjectName'])) {
@@ -49,3 +48,4 @@ $dbResult = getDbAboutMe($db);
 $bio = selectBioFromResults($dbResult);
 $interests = selectInterestsFromResults($dbResult);
 $qualifications = selectQualificationsFromResults($dbResult);
+

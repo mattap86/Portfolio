@@ -9,11 +9,18 @@
  * @param object $db is the database being updated by the function
  *
  */
-function updateAboutMe(string $validatedBio, string $validatedInterests, string $validatedQualifications, PDO $db) {
+function updateAboutMe(string $validatedBio, string $validatedInterests, string $validatedQualifications, PDO $db) : array {
     $updateAboutMe = $db->prepare("UPDATE `about_me` SET `bio` = ?, `interests` = ?, `qualifications` = ? WHERE id='1'");
     $updateAboutMe->execute([$validatedBio, $validatedInterests, $validatedQualifications]);
 }
 
+/*
+ * This function retrieves the data from the selected fields in the about_me table of the portfolio database
+ *
+ * @param array $db represents the database the data is pulled from
+ *
+ * @return array $about_me_result returns the first row of the executed query
+ */
 function getDbAboutMe(PDO $db) : array {
     $aboutMeQuery = $db->prepare("SELECT `bio`, `interests`, `qualifications` FROM `about_me`;");
     $aboutMeQuery->execute();
@@ -82,9 +89,21 @@ function selectQualificationsFromResults(array $result) : string {
  * @param object $db is the database being updated by the function
  *
  */
-function uploadProject(string $validatedProjectName, string $validatedImageUrl, string $validatedProjectUrl, string $validatedProjectSummary, PDO $db) {
+function uploadProject(string $validatedProjectName, string $validatedImageUrl, string $validatedProjectUrl, string $validatedProjectSummary, PDO $db) : array {
     $uploadProjectQuery = $db->prepare("INSERT INTO `projects`(`name`, `image_url`, `url`, `summary`) VALUES (?,?,?,?);");
     $uploadProjectQuery->execute([$validatedProjectName, $validatedImageUrl, $validatedProjectUrl, $validatedProjectSummary]);
+}
+
+/*
+ * This function hides the selected project in the table `projects` defined in the drop down menu of the admin.php page
+ *
+ * @param string $projectName is the new string pulled from the admin.php 'project name' text input
+ * @param object $db is the database being updated by the function
+ *
+ */
+function hideProject(string $projectId, PDO $db) {
+    $hideProjectQuery = $db->prepare("UPDATE `projects` SET `deleted` = 1 WHERE `id`= ?;");
+    $hideProjectQuery->execute([$projectId]);
 }
 
 /*
@@ -94,8 +113,8 @@ function uploadProject(string $validatedProjectName, string $validatedImageUrl, 
  *
  * @return array $projectResults is an associative array of the data fetched by $projectQuery
  */
-function getDbProject(PDO $db) {
-    $projectQuery = $db->prepare("SELECT `name`, `image_url`, `url`, `summary` FROM `projects`;");
+function getDbProject(PDO $db) : array {
+    $projectQuery = $db->prepare("SELECT `name`, `image_url`, `url`, `summary` FROM `projects` WHERE `deleted` = 0;");
     $projectQuery->execute();
     $projectResults = $projectQuery->fetchAll();
     return $projectResults;
@@ -109,11 +128,12 @@ function getDbProject(PDO $db) {
  *
  * @return array $result represents an individual project that is displayed dynamically through the foreach command
  */
-function displayProjects($projectResults)
+function displayProjects(array $projectResults) : string
 {
     $result = '';
     foreach ($projectResults as $projectResult) {
-        $result .= '<div class="projectOne">
+        if (array_key_exists('url', $projectResult) && array_key_exists('image_url', $projectResult) && array_key_exists('summary', $projectResult)) {
+            $result .= '<div class="projectOne">
             <div class="projectBox">
                 <a href=' . $projectResult['url'] . '><img class="projectPics" src=' . $projectResult['image_url'] . '></a>
             </div>
@@ -121,19 +141,11 @@ function displayProjects($projectResults)
                 <h5>' . $projectResult['summary'] . '</h5>
             </div>
         </div>';
+        } else {
+            return 'error';
+        }
     }
-    return $result;
-}
+        return $result;
+    }
 
 
-function deleteProject(PDO $db) {
-
-}
-
-/*
- * This function retrieves the data from the selected fields in the about_me table of the portfolio database
- *
- * @param array $db represents the database the data is pulled from
- *
- * @return array $about_me_result returns the first row of the executed query
- */

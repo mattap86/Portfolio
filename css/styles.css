@@ -14,7 +14,7 @@ a.anchor {
 }
 
 .heroImage {
-    background-image: url("../Images/hero.png");
+    background-image: url("../images/hero.png");
     background-size: cover;
     height: 100vh;
     border-radius: 25px;
@@ -77,7 +77,7 @@ button {
 }
 
 .portfolio {
-    /*background-image: url("../Images/projectbg.png");*/
+    background-image: url("../images/projectbg.png");
     background-size: cover;
     border-radius: 25px;
     margin: 8px;
@@ -116,14 +116,14 @@ footer {
     display: inline-block;
     width: 99%;
     height: 100px;
-    background-image: url("../Images/wolf.png");
+    background-image: url("../images/wolf.png");
     background-size: cover;
     border-radius: 25px;
     margin: 2px 10px 0 8px;
 }
 
 .rocket {
-    background-image: url("../Images/rocket.png");
+    background-image: url("../images/rocket.png");
     width: 75px;
     height: 75px;
     float: right;

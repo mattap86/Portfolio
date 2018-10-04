@@ -4,6 +4,6 @@ body html {
 
 .bg {
     height: 100%;
-    background-image: url("/Images/futureProjectOne.png");
+    background-image: url("/images/futureProjectOne.png");
     background-size: cover;
 }

@@ -42,7 +42,7 @@ class StackTest extends TestCase
     public function testSelectBioFromResultsFailureUnrelatedKey()
     {
         $expected = "error";
-        $example = ["foo"=>"bar"];
+        $example = ["foo" => "bar"];
         $case = selectBioFromResults($example);
         $this->assertEquals($case, $expected);
     }
@@ -81,7 +81,7 @@ class StackTest extends TestCase
     public function testSelectInterestsFromResultsFailureUnrelatedKey()
     {
         $expected = "error";
-        $example = ["foo"=>"bar"];
+        $example = ["foo" => "bar"];
         $case = selectBioFromResults($example);
         $this->assertEquals($case, $expected);
     }
@@ -121,22 +121,34 @@ class StackTest extends TestCase
     public function testSelectQualificationsFromResultsFailureUnrelatedKey()
     {
         $expected = "error";
-        $example = ["foo"=>"bar"];
+        $example = ["foo" => "bar"];
         $case = selectBioFromResults($example);
         $this->assertEquals($case, $expected);
     }
 
+    /*
+     * This success test checks whether the function returns an string from a multidimensional array
+     */
+    public function testDisplayProjectsSuccess()
+    {
+        $expected = '<div class="projectOne">
+            <div class="projectBox">
+                <a href=../PilotShop/pilotshop.html><img class="projectPics" src=images/pilotshop.png></a>
+            </div>
+            <div class="projectSummary projectBox">
+                <h5>OUR FIRST PROPER ATTEMPT</h5>
+            </div>
+        </div>';
+        $example = [['image_url' => 'images/pilotshop.png', 'url' => '../PilotShop/pilotshop.html', 'summary' => 'OUR FIRST PROPER ATTEMPT']];
+        $case = displayProjects($example);
+        $this->assertEquals($case, $expected);
+    }
 
-    //THIS TEST NEEDS ATTENTION! CANNOT FIGURE OUT HOW TO GET A PASS... VERY INFURIATING...
-
-//    /*
-//     * This success test checks whether the function returns an associative array
-//     */
-//    public function testDisplayProjectsSuccess()
-//    {
-//        $expected = ["pilotShop", "Images/pilotshop.png", "../PilotShop/pilotshop.html", "OUR FIRST PROPER ATTEMPT"];
-//        $example = ["name" => ["pilotShop"]]; ["image_url" => ["Images/pilotshop.png"]]; ["url" => ["../PilotShop/pilotshop.html"]]; ["summary" => ["OUR FIRST PROPER ATTEMPT"]];
-//        $case = displayProjects($example);
-//        $this->assertEquals($case, $expected);
-//    }
+    public function testDisplayProjectsFailure()
+    {
+        $expected = 'error';
+        $example = [['image_url => image', 'url' => 'pilot shop', 'summary' => 'summary']];
+        $case = displayProjects($example);
+        $this->assertEquals($case, $expected);
+    }
 }
