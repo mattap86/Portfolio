@@ -3,7 +3,7 @@
 <head>
 </head>
 <body>
-    <form>
+    <form action="loggedIn.php" method="post">
         <input type="text" name="name" placeholder="enter username" />
         <input type="text" name="password" placeholder="enter password" />
         <input type="submit" value="log in" />
