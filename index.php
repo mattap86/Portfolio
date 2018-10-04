@@ -40,16 +40,16 @@ require_once 'php/dbFunction.php';
         <div class="contactIcons">
             <ul class="contactLinks">
                 <li>
-                    <a href="https://github.com/mattap86"><img class="gitHub" src="Images/github-57px.png" alt="GitHub"></a>
+                    <a href="https://github.com/mattap86"><img class="gitHub" src="images/github-57px.png" alt="GitHub"></a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/mattap86"><img class="twitter" src="Images/twitter-64px.png" alt="Twitter"></a>
+                    <a href="https://twitter.com/mattap86"><img class="twitter" src="images/twitter-64px.png" alt="Twitter"></a>
                 </li>
                 <li>
-                    <a href="mailto:matthew.tapley@hotmail.co.uk"><img class="email" src="Images/envelope-64px.png" alt="Email"></a>
+                    <a href="mailto:matthew.tapley@hotmail.co.uk"><img class="email" src="images/envelope-64px.png" alt="Email"></a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/matthew-tapley-5b5a0ba0/"><img class="linkedIn" src="Images/linkedin-64px.png" alt="LinkedIn"></a>
+                    <a href="https://www.linkedin.com/in/matthew-tapley-5b5a0ba0/"><img class="linkedIn" src="images/linkedin-64px.png" alt="LinkedIn"></a>
                 </li>
             </ul>
         </div>
@@ -77,7 +77,6 @@ require_once 'php/dbFunction.php';
             <?php
                 $db = dbconn();
                 $var = getDbProject($db);
-                var_dump($var);
                 echo displayProjects($var);
             ?>
         </div>
@@ -89,7 +88,7 @@ require_once 'php/dbFunction.php';
             <p>ABSOLUTELY NOTHING &copy; 2018 MATTHEW PHILIP TRISTRAM TAPLEY</p>
         </div>
         <div>
-            <a href="#home"><img class="rocket" src="Images/rocket.png" alt="Rocket"></a>
+            <a href="#home"><img class="rocket" src="images/rocket.png" alt="Rocket"></a>
         </div>
     </div>
 </footer>

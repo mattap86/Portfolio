@@ -2,9 +2,10 @@
 <?php
 
 require '../php/edit.php';
-require 'dbFunction.php';
+
 ?>
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,16 +29,12 @@ require 'dbFunction.php';
             <textarea name="newQualifications" rows="10" cols="100" maxlength="600"><?php echo $qualifications ?></textarea>
             <input type="submit" value="Update Qualifications" />
         </div>
+    </form>
+    <form action="admin.php" method="post">
         <div>
-            <h1>CREATE / REMOVE PROJECT</h1>
-            <label>New Project :</label>
-            <input type="radio" name="addDeleteProject" checked />
-            <label>Delete Project :</label>
-            <input type="radio" name="addDeleteProject" />
-        </div>
-        <div>
+            <h1>CREATE PROJECT</h1>
             <label>Project Name :</label>
-            <input type="text" name="newProjectName" placeholder="Enter Name Of New Project..." />
+            <input type="text" name="newProjectName" placeholder="Enter Project Name..." />
         </div>
         <div>
             <label>Upload Project Image :</label>
@@ -45,14 +42,25 @@ require 'dbFunction.php';
         </div>
         <div>
             <label>Upload Project :</label>
-            <input type="text" name="newProjectUrl" placeholder="Enter Project Url" />
+            <input type="text" name="newProjectUrl" placeholder="Enter Project Url..." />
         </div>
         <div>
             <label>Project Summary :</label>
             <textarea name="newProjectSummary" rows="10" cols="100" maxlength="600" placeholder="Max 600 characters..."></textarea>
+            <input type="submit" value="Upload Project" />
         </div>
-        <div>
-            <input type="submit" name="Add Project" />
+    </form>
+    <form action="hide.php" method="post">
+        <h1>HIDE PROJECT</h1>
+        <label>Project Name :</label>
+       <div>
+            <select name="projectId">
+                <option>PLEASE CHOOSE YOUR PROJECT:-</option>
+                <option value="1">pilotShop</option>
+                <option value="2">projectTwo</option>
+                <option value="3">projectThree</option>
+            </select>
+            <input type="submit" value="Hide Project" />
         </div>
     </form>
 </body>
