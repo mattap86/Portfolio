@@ -9,7 +9,12 @@
  * @param object $db is the database being updated by the function
  *
  */
-function updateAboutMe(string $validatedBio, string $validatedInterests, string $validatedQualifications, PDO $db) : array {
+function updateAboutMe(
+    string $validatedBio,
+    string $validatedInterests,
+    string $validatedQualifications,
+    PDO $db
+) : array {
     $updateAboutMe = $db->prepare("UPDATE `about_me` SET `bio` = ?, `interests` = ?, `qualifications` = ? WHERE id='1'");
     $updateAboutMe->execute([$validatedBio, $validatedInterests, $validatedQualifications]);
 }
@@ -89,7 +94,13 @@ function selectQualificationsFromResults(array $result) : string {
  * @param object $db is the database being updated by the function
  *
  */
-function uploadProject(string $validatedProjectName, string $validatedImageUrl, string $validatedProjectUrl, string $validatedProjectSummary, PDO $db) : array {
+function uploadProject(
+    string $validatedProjectName,
+    string $validatedImageUrl,
+    string $validatedProjectUrl,
+    string $validatedProjectSummary,
+    PDO $db
+) : array {
     $uploadProjectQuery = $db->prepare("INSERT INTO `projects`(`name`, `image_url`, `url`, `summary`) VALUES (?,?,?,?);");
     $uploadProjectQuery->execute([$validatedProjectName, $validatedImageUrl, $validatedProjectUrl, $validatedProjectSummary]);
 }
@@ -101,7 +112,7 @@ function uploadProject(string $validatedProjectName, string $validatedImageUrl, 
  * @param object $db is the database being updated by the function
  *
  */
-function hideProject(string $projectId, PDO $db) {
+function hideProject(string $projectId, PDO $db): int {
     $hideProjectQuery = $db->prepare("UPDATE `projects` SET `deleted` = 1 WHERE `id`= ?;");
     $hideProjectQuery->execute([$projectId]);
 }
@@ -131,7 +142,11 @@ function getDbProject(PDO $db) : array {
 function displayProjects(array $projectResults) : string {
     $result = '';
     foreach ($projectResults as $projectResult) {
-        if (array_key_exists('url', $projectResult) && array_key_exists('image_url', $projectResult) && array_key_exists('summary', $projectResult)) {
+        if (
+            array_key_exists('url', $projectResult) &&
+            array_key_exists('image_url', $projectResult) &&
+            array_key_exists('summary', $projectResult)
+        ) {
             $result .= '<div class="projectOne">
             <div class="projectBox">
                 <a href=' . $projectResult['url'] . '><img class="projectPics" src=' . $projectResult['image_url'] . '></a>
