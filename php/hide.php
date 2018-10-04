@@ -7,7 +7,6 @@ $db = dbconn();
 
 if($_POST['projectId']){
     $projectId = $_POST['projectId'];
-    var_dump($projectId);
     hideProject($projectId, $db);
 }
 
